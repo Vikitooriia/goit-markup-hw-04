@@ -38,6 +38,8 @@ body {
 
 .page-header {
     border-bottom: 1px solid var(--line-color);    
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .logo {
@@ -185,12 +187,10 @@ address{
 
 .about-list {
     display: flex;
-    gap: 24px;
     text-align: center;
     justify-content:center;
     margin-bottom: 8px;
     background-color: var(--background-color);
-    width: 264px;
     height: 112px;
     border-radius: 4px;
 }
@@ -253,10 +253,6 @@ address{
     line-height: 1.2;
 }
 
-.team .desc {
-    text-align: center;
-}
-
 /*work-list*/
 
 .section-two {
@@ -287,11 +283,22 @@ address{
     background-color: var(--background-color);
 }
 
+.team-card {
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .team {
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;   
 }
+
+.team .desc {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
 .team > li {
     background: white;
 }
@@ -308,7 +315,6 @@ address{
     display: flex;
     justify-content: center;
     gap:24px;
-    margin-top: 8px;
 }
 .social-link {
     display: flex;
@@ -343,6 +349,7 @@ address{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #8E8F99;
     border: 1px solid #8E8F99;
     border-radius: 4px;
     width: 168px;
@@ -354,11 +361,12 @@ address{
 }
 
 .customer-icon {
-    fill:#8E8F99;
+    fill:currentColor;
 }
 .customer-link:is(:hover, :focus) {
     color: var(--focus);
     border: 1px solid var(--focus);
+    border-color: var(--focus);
 }
 
 .customer-icon:is(:hover, :focus) {
@@ -534,7 +542,6 @@ img {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
-
     display: flex;
     flex-wrap: wrap;
     gap: 48px;
@@ -558,6 +565,7 @@ img {
 }
 .pic-link {
     display: block;
+    text-decoration: none;
 }
 
 .pic-link:is(:hover, :focus) {
